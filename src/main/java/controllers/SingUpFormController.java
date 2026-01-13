@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import model.dto.UserDTO;
 
 public class SingUpFormController {
 
@@ -18,6 +19,9 @@ public class SingUpFormController {
 
     @FXML
     private TextField txtSecondName;
+
+    @FXML
+    private TextField txtEmail;
 
     @FXML
     void clickedSingUp(ActionEvent event) {
