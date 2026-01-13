@@ -10,11 +10,15 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import model.dto.LogingInfoDTO;
+import service.IMPL.UserServiceIMPL;
+import service.UserService;
 
 import java.io.IOException;
 
 public class LogingFormController {
     Stage stage=new Stage();
+    UserService service=new UserServiceIMPL();
 
     @FXML
     private TextField txtEmail;
@@ -36,7 +40,11 @@ public class LogingFormController {
 
     @FXML
     void clickedSingIn(ActionEvent event) {
-
+        LogingInfoDTO dto=new LogingInfoDTO(
+                txtEmail.getText(),
+                txtPassword.getText()
+        );
+        service.checkUser(dto);
     }
 
 }
