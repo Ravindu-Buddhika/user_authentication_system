@@ -5,7 +5,7 @@ import service.UserService;
 
 public class UserServiceIMPL implements UserService {
     @Override
-    public void checkUser(LogingInfoDTO logingInfoDTO) {
+    public void getUser(LogingInfoDTO logingInfoDTO) {
 
     }
 
