@@ -20,15 +20,19 @@ public class LogingRepositoryIMPL implements LogingRepository {
         LogingInfoEntity logingInfoEntity = null;
 
         PreparedStatement preparedStatement = connection.prepareStatement(
-                "SELECT * FROM login_info WHERE email = ?"
+                "SELECT email, password FROM user WHERE email = ?"
         );
         preparedStatement.setString(1, entity.getEmail());
         ResultSet resultSet = preparedStatement.executeQuery();
 
         if (resultSet.next()) {
+
+            logingInfoEntity = new LogingInfoEntity();
+
             logingInfoEntity.setEmail(resultSet.getString("email"));
             logingInfoEntity.setPassword(resultSet.getString("password"));
         }
+
         return logingInfoEntity;
     }
 }

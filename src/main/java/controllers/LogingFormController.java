@@ -44,7 +44,7 @@ public class LogingFormController {
                 txtEmail.getText(),
                 txtPassword.getText()
         );
-        service.getUser(dto);
+        service.getUser(dto,event);
     }
 
 }
