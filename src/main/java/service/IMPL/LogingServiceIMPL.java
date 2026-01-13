@@ -5,14 +5,13 @@ import model.dto.LogingInfoDTO;
 import model.entity.LogingInfoEntity;
 import repository.IMPL.LogingRepositoryIMPL;
 import repository.LogingRepository;
-import service.UserService;
+import service.LogingService;
 
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
 import java.util.Base64;
 
-public class UserServiceIMPL implements UserService {
+public class LogingServiceIMPL implements LogingService {
     LogingRepository logingRepository;
     LogingInfoEntity entity =null;
 

@@ -2,6 +2,6 @@ package service;
 
 import model.dto.LogingInfoDTO;
 
-public interface UserService {
+public interface LogingService {
     void getUser(LogingInfoDTO logingInfoDTO);
 }
