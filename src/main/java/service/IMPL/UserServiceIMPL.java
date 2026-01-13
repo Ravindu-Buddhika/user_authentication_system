@@ -4,6 +4,10 @@ import javafx.scene.control.Alert;
 import model.dto.LogingInfoDTO;
 import service.UserService;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Base64;
+
 public class UserServiceIMPL implements UserService {
     @Override
     public void getUser(LogingInfoDTO logingInfoDTO) {
@@ -20,5 +24,16 @@ public class UserServiceIMPL implements UserService {
             alert.setContentText("Email address must be end with @gmail.com");
             alert.showAndWait();
         }
+    }
+    String hashPassword(String password){
+        try {
+            MessageDigest digest=MessageDigest.getInstance("SHA-256");
+            byte[] hash = digest.digest(password.getBytes("UTF-8"));
+            return Base64.getEncoder().encodeToString(hash);
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
