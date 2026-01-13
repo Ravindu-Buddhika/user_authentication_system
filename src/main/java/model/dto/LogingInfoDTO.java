@@ -1,4 +1,4 @@
-package model;
+package model.dto;
 
 import lombok.*;
 
@@ -7,7 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class LogingInfo {
+public class LogingInfoDTO {
     private String email;
     private String password;
 }
