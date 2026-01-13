@@ -11,14 +11,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.dto.LogingInfoDTO;
-import service.IMPL.UserServiceIMPL;
-import service.UserService;
+import service.IMPL.LogingServiceIMPL;
+import service.LogingService;
 
 import java.io.IOException;
 
 public class LogingFormController {
     Stage stage=new Stage();
-    UserService service=new UserServiceIMPL();
+    LogingService service=new LogingServiceIMPL();
 
     @FXML
     private TextField txtEmail;
