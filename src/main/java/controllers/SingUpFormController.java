@@ -23,4 +23,8 @@ public class SingUpFormController {
     void clickedSingUp(ActionEvent event) {
 
     }
+    @FXML
+    void clickedSingIn(ActionEvent event) {
+
+    }
 }

@@ -8,7 +8,6 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="473.0" prefWidth="417.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SingUpFormController">
    <children>
       <Label layoutX="31.0" layoutY="31.0" text="Sing UP">
@@ -24,5 +23,6 @@
       <PasswordField fx:id="txtPassword" layoutX="49.0" layoutY="258.0" prefHeight="38.0" prefWidth="318.0" promptText="Password" style="-fx-background-radius: 10;" />
       <PasswordField fx:id="txtConfirmPassword" layoutX="49.0" layoutY="318.0" prefHeight="38.0" prefWidth="318.0" promptText="Confirm Password" style="-fx-background-radius: 10;" />
       <Button layoutX="49.0" layoutY="385.0" mnemonicParsing="false" onAction="#clickedSingUp" prefHeight="38.0" prefWidth="95.0" style="-fx-background-radius: 10; -fx-background-color: #005eff;" text="Sing Up" textFill="WHITE" />
+      <Button layoutX="147.0" layoutY="385.0" mnemonicParsing="false" onAction="#clickedSingIn" prefHeight="38.0" prefWidth="95.0" style="-fx-background-radius: 10; -fx-background-color: #a4a4a4;" text="Sing In" textFill="#fff9f9" />
    </children>
 </AnchorPane>
